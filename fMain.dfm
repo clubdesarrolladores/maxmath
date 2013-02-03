@@ -62,7 +62,8 @@ object frmMain: TfrmMain
     Cursor = 1
     Align = alTop
     AutoSize = True
-    Color = clBtnFace
+    Color = clWindow
+    ParentBackground = False
     ParentColor = False
     ParentShowHint = False
     ShowHint = True

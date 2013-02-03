@@ -6084,12 +6084,20 @@ object frmAbout: TfrmAbout
     Transparent = True
   end
   object lblUser: TLabel
-    Left = 288
-    Top = 168
+    Left = 287
+    Top = 165
     Width = 32
     Height = 13
     Alignment = taRightJustify
     Caption = 'lblUser'
+    Color = clBlack
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
     Transparent = True
   end
   object lblMemoria: TLabel
@@ -6099,6 +6107,14 @@ object frmAbout: TfrmAbout
     Height = 13
     Alignment = taRightJustify
     Caption = 'lblMemoria'
+    Color = clBlack
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
     Transparent = True
   end
   object btnClose: TButton
