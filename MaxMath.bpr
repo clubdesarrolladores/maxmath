@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="out\MaxMath.exe"/>
+    <OBJFILES value="out\obj\MaxMath.obj out\obj\fMain.obj out\obj\uRootFinding.obj 
+      out\obj\uMetodos.obj out\obj\uLimite.obj out\obj\uIntervalo.obj 
+      out\obj\uIntegra.obj out\obj\uFuncion.obj out\obj\uConfig.obj 
+      out\obj\fAbout.obj out\obj\fConfiguracion.obj out\obj\fTextEditor.obj 
+      out\obj\fChild.obj out\obj\uEval_Ex.obj out\obj\CalcExpress.obj 
+      out\obj\fFuncion.obj out\obj\fSelectFunc.obj out\obj\fSelectorGraficas.obj 
+      out\obj\fArbol.obj out\obj\fPropVisor.obj out\obj\fIngresoDatos.obj 
+      out\obj\fLimite.obj out\obj\fTrace.obj out\obj\fReporte.obj 
+      out\obj\uColas.obj out\obj\uMath_Ex.obj out\obj\uUtils.obj 
+      out\obj\fExpresion.obj out\obj\uDeriva_Ex.obj out\obj\DiffExpress.obj 
+      out\obj\fSplash.obj out\obj\fRectas.obj out\obj\fNuevoProyecto.obj 
+      out\obj\nuevaRecta.obj out\obj\uRecta.obj out\obj\fVectores.obj 
+      out\obj\fMatrices.obj out\obj\uMatrix.obj out\obj\fNuevaMatriz.obj 
+      out\obj\fVectoresR3.obj out\obj\uGlobals.obj"/>
+    <RESFILES value="MaxMath.res WindowsXP.res Cursores.res StringResources.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) fMain.dfm Forms\About\fAbout.dfm 
+      Forms\Configuracion\fConfiguracion.dfm Forms\TextEditor\fTextEditor.dfm 
+      Forms\Child\fChild.dfm Forms\Funcion\fFuncion.dfm 
+      Forms\SelectFunc\fSelectFunc.dfm 
+      Forms\SelectorGraficas\fSelectorGraficas.dfm Forms\Arbol\fArbol.dfm 
+      Forms\PropVisor\fPropVisor.dfm Forms\IngresoDatos\fIngresoDatos.dfm 
+      Forms\Limite\fLimite.dfm Forms\Trace\fTrace.dfm Forms\Reporte\fReporte.dfm 
+      Forms\Expresion\fExpresion.dfm Forms\Splash\fSplash.dfm 
+      Forms\Rectas\fRectas.dfm Forms\NuevoProyecto\fNuevoProyecto.dfm 
+      Forms\Rectas\nuevaRecta\nuevaRecta.dfm Forms\Vectores\fVectores.dfm 
+      Forms\Matrices\fMatrices.dfm Forms\Matrices\NuevaMatriz\fNuevaMatriz.dfm 
+      Forms\VectoresR3\fVectoresR3.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="MathGrapherPackage.lib bcb2kaxserver.lib indy.lib dbxcds.lib dclocx.lib 
+      soaprtl.lib bcbie.lib nmfast.lib dbexpress.lib inetdbxpress.lib 
+      inetdbbde.lib dsnapcon.lib dsnapcrba.lib visualdbclx.lib teeqr.lib dss.lib 
+      tee.lib teedb.lib teeui.lib qrpt.lib bdecds.lib cds.lib ibxpress.lib 
+      vcldbx.lib bdertl.lib adortl.lib vcldb.lib pkDesigner.lib bcbsmp.lib 
+      vclx.lib rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib vclx.lib bcbsmp.lib pkDesigner.lib vcldb.lib adortl.lib 
+      bdertl.lib vcldbx.lib ibxpress.lib cds.lib bdecds.lib qrpt.lib teeui.lib 
+      teedb.lib tee.lib dss.lib teeqr.lib visualdbclx.lib dsnapcrba.lib 
+      dsnapcon.lib inetdbbde.lib inetdbxpress.lib dbexpress.lib nmfast.lib 
+      bcbie.lib soaprtl.lib dclocx.lib dbxcds.lib indy.lib bcb2kaxserver.lib 
+      MathGrapherPackage.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi pkDesigner.bpi"/>
+    <PATHCPP value=".;Units\RootFinding;Units\Metodos;Units\Limite;Units\Intervalo;Units\Integra;Units\Funcion;Units\Config;Forms\About;Forms\Configuracion;Forms\TextEditor;Forms\Child;Units\Eval_Ex;Forms\Funcion;Forms\SelectFunc;Forms\SelectorGraficas;Forms\Arbol;Forms\PropVisor;Forms\IngresoDatos;Forms\Limite;Forms\Trace;Forms\Reporte;Units\Colas;Units\Math_Ex;Units\Utils;Forms\Expresion;Units\Deriva_Ex;Forms\Splash;Forms\Rectas;Forms\NuevoProyecto;Forms\Rectas\nuevaRecta;Units\Recta;Forms\Vectores;Forms\Matrices;Units\Matriz;Forms\Matrices\NuevaMatriz;Forms\VectoresR3"/>
+    <PATHPAS value=".;Components\Evals"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="MaxMath.cpp"/>
+    <INCLUDEPATH value="components\mathgrapher;Forms\VectoresR3;Forms\Matrices\NuevaMatriz;Units\Matriz;Forms\Matrices;Forms\Vectores;Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;&quot;C:\Archivos de programa\Borland\CBuilder6\Projects&quot;;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="components\mathgrapher;Forms\VectoresR3;Forms\Matrices\NuevaMatriz;Units\Matriz;Forms\Matrices;Forms\Vectores;Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;$(BCB)\Projects\Lib;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;&quot;C:\Archivos de programa\Borland\CBuilder6\Projects&quot;;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-Icomponents\mathgrapher -IForms\VectoresR3 -IForms\Matrices\NuevaMatriz 
+      -IUnits\Matriz -IForms\Matrices -IForms\Vectores -IUnits\Recta 
+      -IForms\Rectas\nuevaRecta -IForms\NuevoProyecto -IForms\Rectas 
+      -IForms\Splash -IUnits\Deriva_Ex -IForms\Expresion -IUnits\Utils 
+      -IUnits\Math_Ex -IUnits\Colas -IForms\Reporte -IForms\Trace -IForms\Limite 
+      -IForms\IngresoDatos -IForms\PropVisor -IForms\Arbol 
+      -IForms\SelectorGraficas -IForms\SelectFunc -IForms\Funcion 
+      -IComponents\Evals -IUnits\Eval_Ex -Icomponents\visor -IForms\Child 
+      -IForms\TextEditor -IForms\Configuracion -IForms\About -IUnits\Config 
+      -IUnits\Funcion -IUnits\Integra -IUnits\Intervalo -IUnits\Limite 
+      -IUnits\Metodos -IUnits\RootFinding 
+      -I&quot;C:\Archivos de programa\Borland\CBuilder6\Projects&quot; -I$(BCB)\include 
+      -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
+    <CFLAG1 value="-Od -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-N2out\obj -N0out\obj -$Y+ -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-Iout\obj -D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="MaxMath.res" FORMNAME="" UNITNAME="MaxMath.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MaxMath.cpp" FORMNAME="" UNITNAME="MaxMath" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="fMain.cpp" FORMNAME="frmMain" UNITNAME="fMain" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\RootFinding\uRootFinding.cpp" FORMNAME="" UNITNAME="uRootFinding" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Metodos\uMetodos.cpp" FORMNAME="" UNITNAME="uMetodos" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Limite\uLimite.cpp" FORMNAME="" UNITNAME="uLimite" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Intervalo\uIntervalo.cpp" FORMNAME="" UNITNAME="uIntervalo" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Integra\uIntegra.cpp" FORMNAME="" UNITNAME="uIntegra" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Funcion\uFuncion.cpp" FORMNAME="" UNITNAME="uFuncion" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Config\uConfig.cpp" FORMNAME="" UNITNAME="uConfig" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\About\fAbout.cpp" FORMNAME="frmAbout" UNITNAME="fAbout" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Configuracion\fConfiguracion.cpp" FORMNAME="frmConfiguracion" UNITNAME="fConfiguracion" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\TextEditor\fTextEditor.cpp" FORMNAME="frmTextEditor" UNITNAME="fTextEditor" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Child\fChild.cpp" FORMNAME="frmChild" UNITNAME="fChild" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Eval_Ex\uEval_Ex.cpp" FORMNAME="" UNITNAME="uEval_Ex" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Components\Evals\CalcExpress.pas" FORMNAME="" UNITNAME="CalcExpress" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Funcion\fFuncion.cpp" FORMNAME="frmFuncion" UNITNAME="fFuncion" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\SelectFunc\fSelectFunc.cpp" FORMNAME="frmSelectFunc" UNITNAME="fSelectFunc" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\SelectorGraficas\fSelectorGraficas.cpp" FORMNAME="frmSelectorGraficas" UNITNAME="fSelectorGraficas" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Arbol\fArbol.cpp" FORMNAME="frmArbol" UNITNAME="fArbol" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\PropVisor\fPropVisor.cpp" FORMNAME="frmPropVisor" UNITNAME="fPropVisor" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\IngresoDatos\fIngresoDatos.cpp" FORMNAME="frmIngresoDatos" UNITNAME="fIngresoDatos" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Limite\fLimite.cpp" FORMNAME="frmLimite" UNITNAME="fLimite" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Trace\fTrace.cpp" FORMNAME="frmTrace" UNITNAME="fTrace" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Reporte\fReporte.cpp" FORMNAME="frmReporte" UNITNAME="fReporte" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Colas\uColas.cpp" FORMNAME="" UNITNAME="uColas" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Math_Ex\uMath_Ex.cpp" FORMNAME="" UNITNAME="uMath_Ex" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Utils\uUtils.cpp" FORMNAME="" UNITNAME="uUtils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Expresion\fExpresion.cpp" FORMNAME="frmExpresion" UNITNAME="fExpresion" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Deriva_Ex\uDeriva_Ex.cpp" FORMNAME="" UNITNAME="uDeriva_Ex" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Components\Evals\DiffExpress.pas" FORMNAME="" UNITNAME="DiffExpress" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Splash\fSplash.cpp" FORMNAME="frmSplash" UNITNAME="fSplash" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="WindowsXP.res" FORMNAME="" UNITNAME="WindowsXP.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Cursores.res" FORMNAME="" UNITNAME="Cursores.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="StringResources.RES" FORMNAME="" UNITNAME="StringResources.RES" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Rectas\fRectas.cpp" FORMNAME="frmRectas" UNITNAME="fRectas" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\NuevoProyecto\fNuevoProyecto.cpp" FORMNAME="frmNuevoProyecto" UNITNAME="fNuevoProyecto" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Rectas\nuevaRecta\nuevaRecta.cpp" FORMNAME="frmNuevaRecta" UNITNAME="nuevaRecta" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Recta\uRecta.cpp" FORMNAME="" UNITNAME="uRecta" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Vectores\fVectores.cpp" FORMNAME="frmVectores" UNITNAME="fVectores" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Matrices\fMatrices.cpp" FORMNAME="frmMatrices" UNITNAME="fMatrices" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Matriz\uMatrix.cpp" FORMNAME="" UNITNAME="uMatrix" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\Matrices\NuevaMatriz\fNuevaMatriz.cpp" FORMNAME="frmNuevaMatriz" UNITNAME="fNuevaMatriz" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Forms\VectoresR3\fVectoresR3.cpp" FORMNAME="frmVectoresR3" UNITNAME="fVectoresR3" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Units\Utils\uGlobals.cpp" FORMNAME="" UNITNAME="uGlobals" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=1
+MinorVer=1
+Release=1
+Build=168
+Debug=0
+PreRelease=0
+Special=0
+Private=1
+DLL=0
+Locale=11274
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=DevStudios Software
+FileDescription=Sistema de procesamiento físico/matemático
+FileVersion=1.1.1.168
+InternalName=pMaxMath
+LegalCopyright=DevStudios Software 2005-2009
+LegalTrademarks=
+OriginalFilename=
+ProductName=MaxMath
+ProductVersion=
+Comments=
+PrivateBuild=
+
+[HistoryLists\hlIncludePath]
+Count=11
+Item0=components\mathgrapher;Forms\VectoresR3;Forms\Matrices\NuevaMatriz;Units\Matriz;Forms\Matrices;Forms\Vectores;Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item1=D:\BorlandCtrls\rx275BCB6;Forms\Matrices\NuevaMatriz;Units\Matriz;Forms\Matrices;Forms\Vectores;Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item2=Units\Matriz;Forms\Matrices;Forms\Vectores;Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item3=Forms\Matrices;Forms\Vectores;Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item4=Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item5=Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;Units\MPVolume
+Item6=Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;Units\MPVolume
+Item7=Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;Units\MPVolume
+Item8=Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;Units\MPVolume
+Item9=Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;Units\MPVolume
+Item10=Units\MPVolume;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Musica;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=11
+Item0=components\mathgrapher;Forms\VectoresR3;Forms\Matrices\NuevaMatriz;Units\Matriz;Forms\Matrices;Forms\Vectores;Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;$(BCB)\Projects\Lib;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item1=D:\BorlandCtrls\rx275BCB6;Forms\Matrices\NuevaMatriz;Units\Matriz;Forms\Matrices;Forms\Vectores;Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;$(BCB)\Projects\Lib;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item2=Units\Matriz;Forms\Matrices;Forms\Vectores;Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;$(BCB)\Projects\Lib;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item3=Forms\Matrices;Forms\Vectores;Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;$(BCB)\Projects\Lib;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item4=Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;$(BCB)\Projects\Lib;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item5=Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;$(BCB)\Projects\Lib;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item6=Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;$(BCB)\Projects\Lib;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item7=Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;$(BCB)\Projects\Lib;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item8=Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;$(BCB)\Projects\Lib;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item9=Units\MPVolume;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Musica;Forms\Configuracion;Forms\About;$(BCB)\Projects\Lib;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item10=Units\MPVolume;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Musica;Forms\Configuracion;Forms\About;$(BCB)\Projects\Lib;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=2
+Item0=$(BCB)\source\vcl;C:\Archivos de programa\Borland\CBuilder6\Examples\Controls\Source\
+Item1=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=2
+Item0=out\obj
+Item1=out\iout
+
+[HistoryLists\hlFinalOutputDir]
+Count=2
+Item0=out\
+Item1=out
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl;C:\Archivos de programa\Borland\CBuilder6\Examples\Controls\Source\
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

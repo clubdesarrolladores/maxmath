@@ -1,0 +1,224 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{15A44625-F827-4B7E-8F3D-37354D24396F}</ProjectGuid>
+			<ProjectType>CppPackage</ProjectType>
+			<MainSource>Eval.cpp</MainSource>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<FrameworkType>None</FrameworkType>
+			<ProjectVersion>13.4</ProjectVersion>
+			<Platform Condition="'$(Platform)'==''">Win32</Platform>
+			<TargetedPlatforms>1</TargetedPlatforms>
+			<AppType>Package</AppType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+			<Base_Win32>true</Base_Win32>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+			<Cfg_1_Win32>true</Cfg_1_Win32>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<VerInfo_Locale>3082</VerInfo_Locale>
+			<DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Winapi;Vcl;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<UsePackages>true</UsePackages>
+			<TASM_IncludePath>$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware;$(TASM_IncludePath)</TASM_IncludePath>
+			<ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+			<BCC_PCHCache>true</BCC_PCHCache>
+			<TASM_Defines>_DEBUG;$(TASM_Defines)</TASM_Defines>
+			<BRCC_Defines>_DEBUG;$(BRCC_Defines)</BRCC_Defines>
+			<BCC_Defines>NO_STRICT;$(BCC_Defines)</BCC_Defines>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<ILINK_AppType>Windows</ILINK_AppType>
+			<BCC_UserSuppliedOptions> -tWM -Vx -r- -k -Ve</BCC_UserSuppliedOptions>
+			<DCC_AdditionalSwitches> -M</DCC_AdditionalSwitches>
+			<BRCC_IncludePath>$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware;$(BRCC_IncludePath)</BRCC_IncludePath>
+			<DCC_UnitSearchPath>.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+			<OutputExt>bpl</OutputExt>
+			<DynamicRTL>true</DynamicRTL>
+			<FinalOutputDir>.</FinalOutputDir>
+			<ILINK_WinAppType>Package</ILINK_WinAppType>
+			<AllPackageLibs>vcldb.lib;adortl.lib;bdertl.lib;vcldbx.lib;ibxpress.lib;dsnap.lib;dsnapcon.lib;teeui.lib;teedb.lib;tee.lib;dss.lib;dsnapcon.lib;bcbsmp.lib;inetdbbde.lib;inetdbxpress.lib;dbexpress.lib;bcbie.lib;soaprtl.lib;dbxcds.lib;indycore.lib;indysystem.lib;bcboffice2k.lib;rtl.lib</AllPackageLibs>
+			<TASM_AdditionalSwitches> /w2</TASM_AdditionalSwitches>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<ILINK_AdditionalOptions> -Gl</ILINK_AdditionalOptions>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<ILINK_LibraryPath>$(BDS)\Projects\Lib;$(BDS)\lib\obj;$(BDS)\lib;$(BDS)\lib\psdk;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<DCC_IncludePath>.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_IncludePath)</DCC_IncludePath>
+			<BCC_IncludePath>$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware;$(BCC_IncludePath)</BCC_IncludePath>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win32)'!=''">
+			<Icon_MainIcon>Eval_Icon.ico</Icon_MainIcon>
+			<DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BCC_UserSuppliedOptions> -tWM -Vx -r- -k -Ve -k</BCC_UserSuppliedOptions>
+			<DCC_Define>DEBUG;$(DCC_Define);$(DCC_Define)</DCC_Define>
+			<DCC_AdditionalSwitches> -M -V</DCC_AdditionalSwitches>
+			<BCC_Defines>_DEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+			<IntermediateOutputDir>Debug_Build</IntermediateOutputDir>
+			<ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<ILINK_LibraryPath>$(BDS)\lib\debug;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+			<LinkPackageImports>rtl.bpi</LinkPackageImports>
+			<LinkPackageStatics>vcldb.lib;adortl.lib;bdertl.lib;vcldbx.lib;ibxpress.lib;dsnap.lib;dsnapcon.lib;teeui.lib;teedb.lib;tee.lib;dss.lib;bcbsmp.lib;inetdbbde.lib;inetdbxpress.lib;dbexpress.lib;bcbie.lib;soaprtl.lib;dbxcds.lib;indycore.lib;indysystem.lib;bcboffice2k.lib</LinkPackageStatics>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_AdditionalSwitches> -M -$O+</DCC_AdditionalSwitches>
+			<BCC_UserSuppliedOptions> -tWM -Vx -r- -k -Ve -r</BCC_UserSuppliedOptions>
+			<BCC_Defines>NDEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+			<IntermediateOutputDir>Release_Build</IntermediateOutputDir>
+			<BCC_InlineFunctionExpansion>true</BCC_InlineFunctionExpansion>
+			<TASM_Debugging>None</TASM_Debugging>
+			<ILINK_LibraryPath>$(BDS)\lib\release;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+		</PropertyGroup>
+		<ItemGroup>
+			<ResFiles Include="CalcExpress.dcr">
+				<BuildOrder>-1</BuildOrder>
+				<BuildOrder>14</BuildOrder>
+			</ResFiles>
+			<DelphiCompile Include="CalcExpress.pas">
+				<BuildOrder>11</BuildOrder>
+				<BuildOrder>7</BuildOrder>
+			</DelphiCompile>
+			<ResFiles Include="DiffExpress.dcr">
+				<BuildOrder>-1</BuildOrder>
+				<BuildOrder>20</BuildOrder>
+			</ResFiles>
+			<DelphiCompile Include="DiffExpress.pas">
+				<BuildOrder>17</BuildOrder>
+				<BuildOrder>1</BuildOrder>
+			</DelphiCompile>
+			<CppCompile Include="Eval.cpp">
+				<BuildOrder>5</BuildOrder>
+				<BuildOrder>5</BuildOrder>
+			</CppCompile>
+			<ResFiles Include="Eval.res">
+				<BuildOrder>2</BuildOrder>
+				<BuildOrder>6</BuildOrder>
+			</ResFiles>
+			<PackageImport Include="rtl.bpi">
+				<BuildOrder>8</BuildOrder>
+				<BuildOrder>8</BuildOrder>
+			</PackageImport>
+			<PackageImport Include="vcl.bpi">
+				<BuildOrder>23</BuildOrder>
+				<BuildOrder>3</BuildOrder>
+			</PackageImport>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppPackage</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">3082</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Debugging>
+						<Debugging Name="DebugSourceDirs">$(BCB)\source\vcl</Debugging>
+					</Debugging>
+					<Parameters>
+						<Parameters Name="RunParams"/>
+						<Parameters Name="Launcher"/>
+						<Parameters Name="UseLauncher">0</Parameters>
+						<Parameters Name="DebugCWD"/>
+						<Parameters Name="HostApplication"/>
+						<Parameters Name="RemoteHost"/>
+						<Parameters Name="RemotePath"/>
+						<Parameters Name="RemoteLauncher"/>
+						<Parameters Name="RemoteCWD"/>
+						<Parameters Name="RemoteDebug">0</Parameters>
+					</Parameters>
+					<Compiler>
+						<Compiler Name="ShowInfoMsgs">0</Compiler>
+						<Compiler Name="LinkDebugVcl">0</Compiler>
+						<Compiler Name="LinkCGLIB">0</Compiler>
+					</Compiler>
+					<CORBA>
+						<CORBA Name="AddServerUnit">1</CORBA>
+						<CORBA Name="AddClientUnit">1</CORBA>
+						<CORBA Name="PrecompiledHeaders">1</CORBA>
+					</CORBA>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+					<Source>
+						<Source Name="MainSource">Eval.cpp</Source>
+					</Source>
+				</CPlusPlusBuilder.Personality>
+				<Platforms>
+					<Platform value="OSX32">False</Platform>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+	</Project>

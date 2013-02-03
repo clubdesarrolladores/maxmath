@@ -1,0 +1,149 @@
+
+STRINGTABLE
+LANGUAGE LANG_SPANISH, 0xB
+{
+100, 	"Derivada de una función"
+101, 	"Derivada segunda"
+102, 	"Recta tangente a una función"
+103, 	"Recta normal a una función"
+104, 	"Recta secante a una función"
+105, 	"Área bajo la curva"
+106, 	"Longitud de arco"
+107, 	"Área lateral de sup. de rev."
+108, 	"Vólumen: Método de discos"
+109, 	"Vólumen: Método de tubos"
+110, 	"Vólumen: Método de arandelas"
+111, 	"Centro de gravedad"
+112, 	"Polinomio de Taylor"
+113, 	"Área entre dos curvas"
+114, 	"Estudio completo"
+115, 	"Intersecciones con los ejes"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_SPANISH, 0xB
+{
+116, 	"Paridad"
+117, 	"Pts críticos de la 1ª derivada"
+118, 	"Crecimiento y decrecimiento"
+119, 	"Extremos máximos y mínimos"
+120, 	"Pts críticos de la 2ª derivada"
+121, 	"Concavidad y convexidad"
+122, 	"Puntos de inflexión"
+123, 	"Asíntotas horizontales y oblicuas"
+124, 	"Intersecciones entre dos curvas"
+125, 	"Exportar muestras"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_SPANISH, 0xB
+{
+992, 	"Función, F(x) derivable en [a, b]"
+993, 	"Función, F(x) y F'(x) derivables en [a, b]"
+994, 	"Función, F(x) derivable en c"
+995, 	"Función, F(x) derivable en c"
+996, 	"Función, F(x) derivable en a y b"
+997, 	"Función, F(x) continua y no negativa en [a, b]"
+998, 	"Función, F'(x) continua en [a, b]"
+999, 	"Función, F'(x) continua en [a, b]"
+1000, 	"Función, F(x) > 0 y continua en [a, b]"
+1001, 	"Funciones, F(x) > G(x) y continuas en [a, b]"
+1002, 	"Funciones, F(x) > G(x) y continuas en [a, b]"
+1003, 	"Funciones, F(x) > G(x) y continuas en [a, b]"
+1004, 	"Función, F tiene n derivadas continuas en c"
+1005, 	"Funciones, F(x) > G(x) y continuas en [a, b]"
+1006, 	"Función, F(x), F'(x) y F''(x) derivables en [a, b]"
+1007, 	"Función, F(x) continua en [a, b]"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_SPANISH, 0xB
+{
+1008, 	"Función, continua en [a, b]"
+1009, 	"Función, F'(x) continua en [a, b]"
+1010, 	"Función, F'(x) continua en [a, b]"
+1011, 	"Función, F'(x) continua en [a, b]"
+1012, 	"Función, F''(x) continua en [a, b]"
+1013, 	"Función, F''(x) continua en [a, b]"
+1014, 	"Función, F''(x) continua en [a, b]"
+1015, 	"Función, F(x) continua en [a, b]"
+1016, 	"Función, F(x) continua en [a, b]"
+1017, 	"Función, F(x) continua en [a, b]"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_SPANISH, 0xB
+{
+2992, 	"_"
+2993, 	"_"
+2994, 	"Coordenada x = c, c en [a, b]"
+2995, 	"Coordenada x = c, c en [a, b]"
+2996, 	"_"
+2997, 	"Error admitido (error > 0)"
+2998, 	"_"
+2999, 	"Eje de revolución horizontal"
+3000, 	"Eje de revolución horizontal"
+3001, 	"Eje de revolución vertical"
+3002, 	"Eje de revolución horizontal"
+3003, 	"_"
+3004, 	"Centro de la aproximación"
+3005, 	"Error admitido (error > 0)"
+3006, 	"_"
+3007, 	"_"
+}
+
+STRINGTABLE
+LANGUAGE LANG_SPANISH, 0xB
+{
+3008, 	"_"
+3009, 	"_"
+3010, 	"_"
+3011, 	"_"
+3012, 	"_"
+3013, 	"_"
+3014, 	"_"
+3015, 	"_"
+3016, 	"_"
+3017, 	"Delta"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_SPANISH, 0xB
+{
+3488, 	"_"
+3489, 	"_"
+3490, 	"c ="
+3491, 	"c ="
+3492, 	"_"
+3493, 	"Tolerancia ="
+3495, 	"_"
+3496, 	"Eje ="
+3497, 	"Eje ="
+3498, 	"Eje ="
+3499, 	"_"
+3500, 	"c ="
+3501, 	"Tolerancia ="
+3502, 	"_"
+3503, 	"_"
+}
+
+STRINGTABLE
+LANGUAGE LANG_SPANISH, 0xB
+{
+3504, 	"_"
+3505, 	"_"
+3506, 	"_"
+3507, 	"_"
+3508, 	"_"
+3509, 	"_"
+3510, 	"_"
+3511, 	"_"
+3512, 	"_"
+3513, 	"dx ="
+}
+

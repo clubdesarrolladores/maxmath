@@ -1,0 +1,79 @@
+MaxParser
+---------
+
+Requisitos:
+
+números reales
+operadores: + - * / ^ %
+parentesis: ( )
+variables: a-z
+constantes: E PI otras...
+funciones: sin cos tan exp neg abs etc...
+
+La notación por parte del usuario será siempre INFIJA, 
+internamente se utilizará notación POSFIJA y luego se evaluará 
+con la ayuda de un arbol binario con ejecución multihilo.
+
+Se trata de una clase MaxParser con los siguientes servicios:
+
+verificar la entrada en notación infija
+informar de los errores de manera precisa y oportuna
+simplificar la expresión
+evaluarla y retornar los resultados
+
+La clase debe estar preparada para realizar "consultas preparadas"
+
+Debe ser eficiente y eficaz, implementada con C++ sobre una dll 
+llamada maxparser.dll
+
+INFIJA:		8%2+sin(PI*x)/(12.9-cos(-x))^2
+
+POSFIJA:	8 2 % PI x * sin -x cos 12.9 - 2 ^ / +
+POSFIJA SIMPLE:	4 PI x * sin -x cos 12.9 - 2 ^ / +
+
+
+class MaxParser
+{
+	private:
+		string infija;
+		string infijaSimple;
+		string posfija;
+		Tree *arbol;
+		//Stack *pila; //posible solucion
+		bool verificar();
+	public:
+		MaxParser();
+		void setInfija(string infija);
+		string getInfija();
+		string getInfijaSimple();
+		bool simplificar();
+		bool evaluable();
+		double evaluar(double *parametros, bool cache = false);
+		
+}
+
+MaxParser *mp = new MaxParser();
+try
+{
+	mp->setInfija("2+3*(x-1)");
+	cout << "Expresion: " << mp->getInfija() << endl;
+	cout << "Expresion simplificada: " << mp->simplificar() << endl;
+	double result = mp->evaluar([5.743]);
+	cout << "Resultado: " << result << endl;
+
+}
+catch(MaxParserException e){
+	cout << "MaxParser Error: " << e->errorMsg << endl;
+	cout << "Caracter: " << e->errorCode;
+}
+
+
+//--------------------------------
+
+- Pasar de infija a postfija en C++: D:\Projects\CppBuilder\alem
+- Evaluador con pila en C: D:\Projects\CodeBlocks\C\Calc
+
+
+//************************************************************
+
+Graficador 2D/3D de muestras!
