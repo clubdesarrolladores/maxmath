@@ -70,7 +70,7 @@
 			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
 			<ILINK_IntermediateOutputPath>out\obj</ILINK_IntermediateOutputPath>
 			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
-			<ILINK_LibraryPath>Forms\IngresoDatos\;Forms\NuevoProyecto\;Forms\Matrices\;Forms\Limite\;Units\Integra\;Units\Matriz\;Forms\About\;Units\Recta\;Forms\Matrices\NuevaMatriz\;Forms\Child\;Units\Utils\;Units\Deriva_Ex\;Units\Eval_Ex\;Units\Limite\;Units\Config\;Components\Evals\;Units\RootFinding\;Forms\VectoresR3\;Forms\Reporte\;Units\Funcion\;Forms\Trace\;Forms\PropVisor\;Forms\Rectas\nuevaRecta\;Units\Math_Ex\;Forms\SelectFunc\;Forms\Configuracion\;Units\Colas\;Forms\Rectas\;Forms\Vectores\;Forms\Funcion\;Forms\TextEditor\;Units\Metodos\;Forms\Arbol\;Forms\Expresion\;Forms\Splash\;Units\Intervalo\;Forms\SelectorGraficas\;components\mathgrapher;Forms\VectoresR3;Forms\Matrices\NuevaMatriz;Units\Matriz;Forms\Matrices;Forms\Vectores;Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;$(BDS)\Projects\Lib;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BDS)\lib\obj;$(BDS)\lib;$(BDS)\lib\psdk;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ILINK_LibraryPath>Forms\IngresoDatos\;Forms\NuevoProyecto\;Forms\Matrices\;Forms\Limite\;Units\Integra\;Units\Matriz\;Forms\About\;Units\Recta\;Forms\Matrices\NuevaMatriz\;Forms\Child\;Units\Utils\;Units\Deriva_Ex\;Units\Eval_Ex\;Units\Limite\;Units\Config\;Components\Evals\;Units\RootFinding\;Forms\VectoresR3\;Forms\Reporte\;Units\Funcion\;Forms\Trace\;Forms\PropVisor\;Forms\Rectas\nuevaRecta\;Units\Math_Ex\;Forms\SelectFunc\;Forms\Configuracion\;Units\Colas\;Forms\Rectas\;Forms\Vectores\;Forms\Funcion\;Forms\TextEditor\;Units\Metodos\;Forms\Arbol\;Forms\Expresion\;Forms\Splash\;Units\Intervalo\;Forms\SelectorGraficas\;components\mathgrapher;Forms\VectoresR3;Forms\Matrices\NuevaMatriz;Units\Matriz;Forms\Matrices;Forms\Vectores;Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;$(BDS)\lib;$(ILINK_LibraryPath)</ILINK_LibraryPath>
 			<DCC_IncludePath>.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_IncludePath)</DCC_IncludePath>
 			<BCC_IncludePath>components\mathgrapher;Forms\VectoresR3;Forms\Matrices\NuevaMatriz;Units\Matriz;Forms\Matrices;Forms\Vectores;Units\Recta;Forms\Rectas\nuevaRecta;Forms\NuevoProyecto;Forms\Rectas;Forms\Splash;Units\Deriva_Ex;Forms\Expresion;Units\Utils;Units\Math_Ex;Units\Colas;Forms\Reporte;Forms\Trace;Forms\Limite;Forms\IngresoDatos;Forms\PropVisor;Forms\Arbol;Forms\SelectorGraficas;Forms\SelectFunc;Forms\Funcion;Components\Evals;Units\Eval_Ex;components\visor;Forms\Child;Forms\TextEditor;Forms\Configuracion;Forms\About;Units\Config;Units\Funcion;Units\Integra;Units\Intervalo;Units\Limite;Units\Metodos;Units\RootFinding;C:\Archivos de programa\Borland\CBuilder6\Projects;$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware;$(BCC_IncludePath)</BCC_IncludePath>
 			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
@@ -93,16 +93,14 @@
 			<IntermediateOutputDir>Debug_Build</IntermediateOutputDir>
 			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
 			<ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
-			<ILINK_LibraryPath>$(BDS)\lib\debug;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
 			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
 			<UsePackages>false</UsePackages>
-			<LinkPackageImports>vcl.bpi;rtl.bpi;vclx.bpi;pkDesigner.bpi</LinkPackageImports>
 			<DCC_StrictVarStrings>false</DCC_StrictVarStrings>
 			<_TCHARMapping>wchar_t</_TCHARMapping>
 			<BCC_AllowNonConstCalls>true</BCC_AllowNonConstCalls>
-			<LinkPackageStatics>vcldb.lib;adortl.lib;bdertl.lib;vcldbx.lib;ibxpress.lib;dsnap.lib;dsnapcon.lib;teeui.lib;teedb.lib;tee.lib;inetdbbde.lib;inetdbxpress.lib;dbexpress.lib;bcbie.lib;soaprtl.lib;dbxcds.lib;indycore.lib;indysystem.lib;bcboffice2k.lib;MathGrapherPackage.lib</LinkPackageStatics>
+			<LinkPackageStatics>vcl.lib;rtl.lib;vclx.lib;pkDesigner.lib;vcldb.lib;adortl.lib;bdertl.lib;vcldbx.lib;ibxpress.lib;dsnap.lib;dsnapcon.lib;teeui.lib;teedb.lib;tee.lib;inetdbbde.lib;inetdbxpress.lib;dbexpress.lib;bcbie.lib;soaprtl.lib;dbxcds.lib;indycore.lib;indysystem.lib;bcboffice2k.lib;MathGrapherPackage.lib</LinkPackageStatics>
 			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
 			<VerInfo_Locale>1033</VerInfo_Locale>
 			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.1.1.168;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
@@ -501,6 +499,7 @@
 				<Platforms>
 					<Platform value="Win32">True</Platform>
 				</Platforms>
+				<ModelSupport>False</ModelSupport>
 			</BorlandProject>
 			<ProjectFileVersion>12</ProjectFileVersion>
 		</ProjectExtensions>
