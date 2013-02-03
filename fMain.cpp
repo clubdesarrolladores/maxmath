@@ -50,6 +50,8 @@ __fastcall TfrmMain::TfrmMain(TComponent* Owner) : TForm(Owner) {
 void __fastcall TfrmMain::FormCreate(TObject *Sender) {
 	/* Asociamos la extensión pmm a la aplicación */
 	if (Config.VerificarAsoc) {
+		//TODO: Ahora necesita permisos especiales para realizar esto
+		// Cuando lo programé, no hacía falta
 		AsociarExtension();
 	}
 	/* Fijamos los directorios de los diálogos */
@@ -250,23 +252,26 @@ void __fastcall TfrmMain::FormResize(TObject *Sender) {
 // ---------------------------------------------------------------------------
 
 void TfrmMain::AsociarExtension() {
-	HINSTANCE dllhandle = LoadLibrary(L"RegExt.dll");
-	if (dllhandle) {
-		FIsRegExt IsRegExt = (FIsRegExt)GetProcAddress(dllhandle, "_IsRegExt");
-		if (IsRegExt && !IsRegExt(".pmm", "MaxMath File",
-			AnsiString(Application->ExeName).c_str())) {
-			FRegExt RegExt = (FRegExt)GetProcAddress(dllhandle, "_RegExt");
-			if (RegExt) {
-				RegExt(".pmm", "MaxMath File", "Proyecto MaxMath",
-					AnsiString(Application->ExeName).c_str(), 0);
-			}
-		}
-		FreeLibrary(dllhandle);
-	}
-	else {
-		char msg[] =
-			"No se puedo asociar la extensión.\nLa librería 'RegExt.dll' no está disponible.";
-		Application->MessageBox(String(msg).c_str(), L"Error", MB_OK + MB_ICONERROR);
+	try {
+        HINSTANCE dllhandle = LoadLibrary(L"RegExt.dll");
+        	if (dllhandle) {
+        		FIsRegExt IsRegExt = (FIsRegExt)GetProcAddress(dllhandle, "_IsRegExt");
+        		if (IsRegExt && !IsRegExt(".pmm", "MaxMath File",
+        			AnsiString(Application->ExeName).c_str())) {
+        			FRegExt RegExt = (FRegExt)GetProcAddress(dllhandle, "_RegExt");
+        			if (RegExt) {
+        				RegExt(".pmm", "MaxMath File", "Proyecto MaxMath",
+        					AnsiString(Application->ExeName).c_str(), 0);
+        			}
+        		}
+        		FreeLibrary(dllhandle);
+        	}
+        	else {
+        		char msg[] =
+        			"No se puedo asociar la extensión.\nLa librería 'RegExt.dll' no está disponible.";
+        		Application->MessageBox(String(msg).c_str(), L"Error", MB_OK + MB_ICONERROR);
+        	}
+    } catch (...) {
 	}
 }
 
