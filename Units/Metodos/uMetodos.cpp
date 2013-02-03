@@ -68,7 +68,8 @@ TInfoFuncion __fastcall Recta_Tangente(TInfoFuncion Funcion, long double c)
   long double y1,lim, x1, x2;
   TIntervalo *F_c, *f_c;
   TInfoInt Info;
-  strcpy(T.Nombre, Format("Tangente de %s en x = %g", ARRAYOFCONST((Funcion.Nombre, c))).c_str());
+  WCHAR *name = Format("Tangente de %s en x = %g", ARRAYOFCONST((Funcion.Nombre, c))).c_str();
+  strcpy(T.Nombre, AnsiString(name).c_str());
   T.Graficar = true;
   F = Derivada(Funcion);
   F_c = Find(F.Intervalo, c);
@@ -110,7 +111,10 @@ TInfoFuncion __fastcall Recta_Normal(TInfoFuncion Funcion, long double c)
   long double y1,lim, x1, x2;
   TIntervalo *F_c, *f_c;
   TInfoInt Info;
-  strcpy(N.Nombre, Format("Normal de %s en x = %g", ARRAYOFCONST((Funcion.Nombre, c))).c_str());
+
+  WCHAR *name = Format("Normal de %s en x = %g", ARRAYOFCONST((Funcion.Nombre, c))).c_str();
+  strcpy(N.Nombre, AnsiString(name).c_str());
+  
   N.Graficar = true;
   F = Derivada(Funcion);
   F_c = Find(F.Intervalo, c);
@@ -156,7 +160,10 @@ TInfoFuncion __fastcall Recta_Secante(TInfoFuncion Funcion, long double a, long 
   long double fa, fb, m;
   TIntervalo *F;
   F = Find(Funcion.Intervalo, b-MinDouble);
-  strcpy(S.Nombre, Format("Secante de %s en x1 = %g y x2 = %g", ARRAYOFCONST((Funcion.Nombre, a, b))).c_str());
+
+  WCHAR *name = Format("Secante de %s en x1 = %g y x2 = %g", ARRAYOFCONST((Funcion.Nombre, a, b))).c_str();
+  strcpy(S.Nombre, AnsiString(name).c_str());
+
   S.Graficar = true;
   if( F != NULL )
   {
@@ -290,8 +297,10 @@ long double __fastcall LongitudDeArco(TInfoFuncion Funcion, long double a, long 
   n = Count(Funcion.Intervalo);
   for( i = 0; i < n; i++)
   {
-    Int = Find(L.Intervalo,i);
-    strcpy(Int->Info.Expresion, Format("sqrt((%s)^2+1)", ARRAYOFCONST((Int->Info.Expresion))).c_str());
+	Int = Find(L.Intervalo,i);
+
+	WCHAR *expr = Format("sqrt((%s)^2+1)", ARRAYOFCONST((Int->Info.Expresion))).c_str();
+	strcpy(Int->Info.Expresion, AnsiString(expr).c_str());
   }
   Result = IntegralDefinida(L, a, b) + LongitudNula(Funcion, a, b);
   DeleteAll(L.Intervalo);
@@ -310,8 +319,11 @@ long double __fastcall AreaLatSupRev(TInfoFuncion Funcion, long double a, long d
   for( i = 0; i < n; i++)
   {
     Int = Find(L.Intervalo,i);
-    IntF = Find(Funcion.Intervalo,i);
-    strcpy(Int->Info.Expresion, Format("%s*((%s)-%g)*sqrt(1+(%s)^2)", ARRAYOFCONST((s2Pi, IntF->Info.Expresion, eje, Int->Info.Expresion))).c_str());
+	IntF = Find(Funcion.Intervalo,i);
+
+	WCHAR *expr = Format("%s*((%s)-%g)*sqrt(1+(%s)^2)", ARRAYOFCONST((s2Pi, IntF->Info.Expresion, eje, Int->Info.Expresion))).c_str();
+	strcpy(Int->Info.Expresion, AnsiString(expr).c_str());
+
   }
   Result = IntegralDefinida(L, a, b);
   DeleteAll(L.Intervalo);
@@ -329,9 +341,12 @@ long double __fastcall VolumenDiscos(TInfoFuncion Funcion, long double a, long d
   n = Count(Funcion.Intervalo);
   for( i = 0; i < n; i++)
   {
-    Int = Find(L.Intervalo,i);
-    strcpy(Int->Info.Expresion,
-      Format("%s*((%s)-(%g))^2", ARRAYOFCONST((sPi, Int->Info.Expresion, eje))).c_str());
+	Int = Find(L.Intervalo,i);
+
+	WCHAR *expr = Format("%s*((%s)-(%g))^2", ARRAYOFCONST((sPi, Int->Info.Expresion, eje))).c_str();
+	strcpy(Int->Info.Expresion, AnsiString(expr).c_str());
+	
+
   }
   Result = IntegralDefinida(L, a, b);
   DeleteAll(L.Intervalo);
@@ -346,7 +361,10 @@ long double __fastcall VolumenTubos(TInfoFuncion F, TInfoFuncion G, long double 
   TInfoInt Info;
   Info.Min = a;
   Info.Max = b;
-  strcpy(Info.Expresion, Format("%s*((%g-x)*((%s)-(%s)))", ARRAYOFCONST((s2Pi,eje,Find(F.Intervalo,a)->Info.Expresion,Find(G.Intervalo,a)->Info.Expresion))).c_str());
+
+  WCHAR *expr = Format("%s*((%g-x)*((%s)-(%s)))", ARRAYOFCONST((s2Pi,eje,Find(F.Intervalo,a)->Info.Expresion,Find(G.Intervalo,a)->Info.Expresion))).c_str();
+  strcpy(Info.Expresion, AnsiString(expr).c_str());
+
   L.Intervalo = NULL;
   Add(L.Intervalo,Info);
   Result = IntegralDefinida(L, a, b);
@@ -362,8 +380,10 @@ long double __fastcall VolumenArandelas(TInfoFuncion F, TInfoFuncion G, long dou
   TInfoInt Info;
   Info.Min = a;
   Info.Max = b;
-  strcpy(Info.Expresion,
-  Format("%s*(((%s)-(%g))^2-((%s)-(%g))^2)", ARRAYOFCONST((sPi, Find(F.Intervalo,a)->Info.Expresion, eje, Find(G.Intervalo,a)->Info.Expresion, eje))).c_str());
+
+  WCHAR *expr = Format("%s*(((%s)-(%g))^2-((%s)-(%g))^2)", ARRAYOFCONST((sPi, Find(F.Intervalo,a)->Info.Expresion, eje, Find(G.Intervalo,a)->Info.Expresion, eje))).c_str();
+  strcpy(Info.Expresion, AnsiString(expr).c_str());
+
   L.Intervalo = NULL;
   Add(L.Intervalo,Info);
   Result = IntegralDefinida(L, a, b);
@@ -383,17 +403,26 @@ void __fastcall Centro_Gravedad (TInfoFuncion F, TInfoFuncion G, long double a, 
   Info.Max = b;
   Fexp = Find(F.Intervalo,a)->Info.Expresion;
   Gexp = Find(G.Intervalo,a)->Info.Expresion;
-  strcpy(Info.Expresion, Format("(%s)-(%s)", ARRAYOFCONST((Fexp, Gexp))).c_str());
+
+  WCHAR *expr = Format("(%s)-(%s)", ARRAYOFCONST((Fexp, Gexp))).c_str();
+  strcpy(Info.Expresion, AnsiString(expr).c_str());
+
   L.Intervalo = NULL;
   Add(L.Intervalo,Info);
   m = IntegralDefinida(L, a, b);
   DeleteAll(L.Intervalo);
-  strcpy(Info.Expresion, Format("x*((%s)-(%s))", ARRAYOFCONST((Fexp, Gexp))).c_str());
+
+  expr = Format("x*((%s)-(%s))", ARRAYOFCONST((Fexp, Gexp))).c_str();
+  strcpy(Info.Expresion, AnsiString(expr).c_str());
+
   L.Intervalo = NULL;
   Add(L.Intervalo,Info);
   my = IntegralDefinida(L, a, b);
   DeleteAll(L.Intervalo);
-  strcpy(Info.Expresion, Format("((%s)-(%s))*((%s)+(%s))/2", ARRAYOFCONST((Fexp, Gexp, Fexp, Gexp))).c_str());
+
+  expr = Format("((%s)-(%s))*((%s)+(%s))/2", ARRAYOFCONST((Fexp, Gexp, Fexp, Gexp))).c_str();
+  strcpy(Info.Expresion, AnsiString(expr).c_str());
+
   L.Intervalo = NULL;
   Add(L.Intervalo,Info);
   mx = IntegralDefinida(L, a, b);
@@ -438,7 +467,8 @@ TInfoFuncion __fastcall PolinomioTaylor(TInfoFuncion Funcion, long double c, uns
     S = S + "+" + monomio((long double)Eval.Value(c)/(long double)factorial(g), c, g);
   }
   g = g-1;
-  strcpy(I.Expresion, StringReplace(S ,"+-","-",rf).c_str());
+
+  strcpy(I.Expresion, AnsiString(StringReplace(S ,"+-","-",rf)).c_str());
   Add(P.Intervalo, I);
   return P;
 }
@@ -451,8 +481,10 @@ long double __fastcall Area2Curvas(TInfoFuncion F, TInfoFuncion G, long double a
   TInfoInt Info;
   Info.Min = a;
   Info.Max = b;
-  strcpy(Info.Expresion,
-  Format("(%s)-(%s)", ARRAYOFCONST((Find(F.Intervalo,a)->Info.Expresion, Find(G.Intervalo,a)->Info.Expresion))).c_str());
+
+  WCHAR *expr = Format("(%s)-(%s)", ARRAYOFCONST((Find(F.Intervalo,a)->Info.Expresion, Find(G.Intervalo,a)->Info.Expresion))).c_str();
+  strcpy(Info.Expresion, AnsiString(expr).c_str());
+
   L.Intervalo = NULL;
   Add(L.Intervalo,Info);
   Result = IntegralDefinida(L, a, b, ErrorCalc);
@@ -790,7 +822,10 @@ TInfoFuncion __fastcall Asintotas(AnsiString Expresion)
   long double a, b;
   TInfoInt Info;
   TInfoFuncion Asintota;
-  strcpy(Asintota.Nombre, Format("Asintota de %s", ARRAYOFCONST((Expresion))).c_str());
+
+  WCHAR *name = Format("Asintota de %s", ARRAYOFCONST((Expresion))).c_str();
+  strcpy(Asintota.Nombre, AnsiString(name).c_str());
+
   Asintota.Graficar= true;
   Asintota.Intervalo = NULL;
 
@@ -810,14 +845,21 @@ TInfoFuncion __fastcall Asintotas(AnsiString Expresion)
   if( fabs(a) < 1E-2 )
     if( fabs(b) > 5000 )
       strcpy(Info.Expresion, "0");
-    else
-      strcpy(Info.Expresion, Format("%g", ARRAYOFCONST((b))).c_str());
+	else {
+	  WCHAR *expr = Format("%g", ARRAYOFCONST((b))).c_str();
+	  strcpy(Info.Expresion, AnsiString(expr).c_str());
+	}
+
   else
-    if(fabs(a) < 200)
-      if(fabs(b) < 1E-2)
-        strcpy(Info.Expresion, Format("%g*x", ARRAYOFCONST((a))).c_str());
-      else
-        strcpy(Info.Expresion, Format("%g*x-%g", ARRAYOFCONST((a, b))).c_str());
+	if(fabs(a) < 200) {
+		WCHAR *expr;
+		if(fabs(b) < 1E-2)
+			expr = Format("%g*x", ARRAYOFCONST((a))).c_str();
+		else
+			expr = Format("%g*x-%g", ARRAYOFCONST((a, b))).c_str();
+		strcpy(Info.Expresion, AnsiString(expr).c_str());
+	}
+
     else
       strcpy(Info.Expresion, "0");
   Info.Min = -100;
