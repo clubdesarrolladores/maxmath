@@ -1,9 +1,9 @@
 object frmChild: TfrmChild
   Left = 325
   Top = 212
-  Width = 320
-  Height = 240
   Caption = 'Sin_Titulo.mmf'
+  ClientHeight = 182
+  ClientWidth = 304
   Color = 3553597
   Constraints.MinHeight = 240
   Constraints.MinWidth = 320
@@ -26,8 +26,8 @@ object frmChild: TfrmChild
   object dsgVisor: TDesigner2D
     Left = 0
     Top = 0
-    Width = 312
-    Height = 186
+    Width = 304
+    Height = 182
     Cursor = 8
     FontAxeX.Charset = DEFAULT_CHARSET
     FontAxeX.Color = clWhite
@@ -56,22 +56,24 @@ object frmChild: TfrmChild
     GridY.Color = 15658734
     GridY.Style = psDot
     BackGround.Color = 3553597
-    GridStepX = 0.5
-    GridStepY = 0.5
-    DiscretStepX = 0.1
+    GridStepX = 0.500000000000000000
+    GridStepY = 0.500000000000000000
+    DiscretStepX = 0.100000000000000000
     NameAxeX = 'X'
     NameAxeY = 'Y'
     MarksLengthAxeX = 6
     MarksLengthAxeY = 6
-    MarksStepX = 0.25
-    MarksStepY = 0.25
-    LabelsStepX = 0.5
-    LabelsStepY = 0.5
+    MarksStepX = 0.250000000000000000
+    MarksStepY = 0.250000000000000000
+    LabelsStepX = 0.500000000000000000
+    LabelsStepY = 0.500000000000000000
     Align = alClient
     PopupMenu = pmuVisor
     OnMouseDown = dsgVisorMouseDown
     OnMouseMove = dsgVisorMouseMove
     OnMouseUp = dsgVisorMouseUp
+    ExplicitWidth = 312
+    ExplicitHeight = 186
   end
   object mnuChild: TMainMenu
     Images = frmMain.imlMain

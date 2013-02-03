@@ -3,6 +3,8 @@
 #include <vcl.h>
 #pragma hdrstop
 
+#include <tchar.h>
+
 #include "fSplash.h"
 
 //---------------------------------------------------------------------------
@@ -30,7 +32,9 @@ USEFORM("Forms\Matrices\fMatrices.cpp", frmMatrices);
 USEFORM("Forms\Matrices\NuevaMatriz\fNuevaMatriz.cpp", frmNuevaMatriz);
 USEFORM("Forms\VectoresR3\fVectoresR3.cpp", frmVectoresR3);
 //---------------------------------------------------------------------------
-WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
+
+WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR cmd, int)
+//WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
   try{
     TfrmSplash *frmSplash = new TfrmSplash(NULL);

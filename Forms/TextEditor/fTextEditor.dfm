@@ -1,12 +1,12 @@
 object frmTextEditor: TfrmTextEditor
   Left = 342
   Top = 234
-  Width = 640
-  Height = 480
   ActiveControl = rtxtTexto
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSizeToolWin
   Caption = 'Editor de texto'
+  ClientHeight = 446
+  ClientWidth = 624
   Color = clBtnFace
   Constraints.MaxHeight = 600
   Constraints.MaxWidth = 800
@@ -25,8 +25,8 @@ object frmTextEditor: TfrmTextEditor
   TextHeight = 13
   object sbrStatus: TStatusBar
     Left = 0
-    Top = 415
-    Width = 632
+    Top = 427
+    Width = 624
     Height = 19
     Cursor = 1
     Panels = <
@@ -39,13 +39,14 @@ object frmTextEditor: TfrmTextEditor
       item
         Width = 50
       end>
-    SimplePanel = False
+    ExplicitTop = 415
+    ExplicitWidth = 632
   end
   object rtxtTexto: TRichEdit
     Left = 0
     Top = 24
-    Width = 632
-    Height = 391
+    Width = 624
+    Height = 403
     Cursor = 3
     Align = alClient
     Font.Charset = ANSI_CHARSET
@@ -65,14 +66,14 @@ object frmTextEditor: TfrmTextEditor
   object tbrTools: TToolBar
     Left = 0
     Top = 0
-    Width = 632
+    Width = 624
     Height = 24
     Cursor = 1
     AutoSize = True
     Caption = 'tbrTools'
-    Flat = True
     Images = imglstEditor
     TabOrder = 0
+    ExplicitWidth = 632
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
@@ -564,7 +565,7 @@ object frmTextEditor: TfrmTextEditor
     Left = 112
     Top = 96
     Bitmap = {
-      494C010116001800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010116001800080010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000006000000001002000000000000060
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1369,8 +1370,6 @@ object frmTextEditor: TfrmTextEditor
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    MinFontSize = 0
-    MaxFontSize = 0
     Left = 152
     Top = 160
   end

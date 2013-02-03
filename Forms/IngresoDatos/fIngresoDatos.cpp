@@ -144,7 +144,7 @@ void __fastcall TfrmIngresoDatos::btnCalcularClick(TObject *Sender)
   unsigned int g;
   TCLongDouble cldx, cldy, cldb, cldAux;
   if( !GetDatos(&Fx,&Gx,&a,&b,&e) ){
-    Application->MessageBox("Existen errores en los datos.\nPor favor revíselos.", "Error en definición", MB_OK+MB_ICONERROR);
+	Application->MessageBox(L"Existen errores en los datos.\nPor favor revíselos.", L"Error en definición", MB_OK+MB_ICONERROR);
     return;}
   prgProgreso->Position = 50;
   try{
@@ -418,21 +418,21 @@ void __fastcall TfrmIngresoDatos::btnCalcularClick(TObject *Sender)
         frmTextEditor->dlgSaveText->FilterIndex = 0;
         if( frmTextEditor->dlgSaveText->Execute() )
           if( !Funciones->ExportFunction(Fx, a, b, e, frmTextEditor->dlgSaveText->FileName) )
-            Application->MessageBox("Error al exportar las muestras", "Error de archivo", MB_OK+MB_ICONWARNING);
-        break;
-      //-----------------------------------
-      default:
-        ModalResult = mrNone;
-        return;
-      //-----------------------------------
-    }
-    ModalResult = mrOk;
-    return;
+			Application->MessageBox(L"Error al exportar las muestras", L"Error de archivo", MB_OK+MB_ICONWARNING);
+		break;
+	  //-----------------------------------
+	  default:
+		ModalResult = mrNone;
+		return;
+	  //-----------------------------------
+	}
+	ModalResult = mrOk;
+	return;
   }catch(...)
   {
-    prgProgreso->Position = 0;
-    Application->MessageBox("La operación no puede llevarse a cabo con los "
-        "parámetros actuales", "Error interno", MB_OK+MB_ICONERROR);
+	prgProgreso->Position = 0;
+	Application->MessageBox(L"La operación no puede llevarse a cabo con los "
+		L"parámetros actuales", L"Error interno", MB_OK+MB_ICONERROR);
     ModalResult = mrNone;
   }
 }

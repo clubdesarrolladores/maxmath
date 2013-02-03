@@ -21,7 +21,8 @@ void __fastcall TfrmArbol::CrearArbol(void)
   TTreeNode *Nodo, *Nodo2;
   treeFunciones->Items->Clear();
   for( int i = 0; i < Funciones->Count; i++){
-    Nodo = treeFunciones->Items->Add(NULL, Funciones->Items[i].Nombre);
+	String s(Funciones->Items[i].Nombre);
+	Nodo = treeFunciones->Items->Add(NULL, s);
     for( int j = 0; j < Count(Funciones->Items[i].Intervalo); j++){
       Nodo2 = treeFunciones->Items->AddChild(Nodo,Find(Funciones->Items[i].
         Intervalo,j)->Info.Expresion);
@@ -43,8 +44,9 @@ void __fastcall TfrmArbol::treeFuncionesClick(TObject *Sender)
     lblTitle4->Caption = "Graficar:";
     lblTitle5->Caption = "";
     pbxMuestra->Visible = false;
-    Intervalos = Funciones->Items[treeFunciones->Selected->Index].Intervalo;
-    txtInfo1->Text = Funciones->Items[treeFunciones->Selected->Index].Nombre;
+	Intervalos = Funciones->Items[treeFunciones->Selected->Index].Intervalo;
+	String text(Funciones->Items[treeFunciones->Selected->Index].Nombre);
+	txtInfo1->Text = text;
     lblInfo2->Caption = IntToStr(Count(Intervalos));
     Soporte(Intervalos,&a,&b);
     lblInfo3->Caption = "( "+FormatFloat("0.##",a)+"; "+FormatFloat("0.##",b)+")";

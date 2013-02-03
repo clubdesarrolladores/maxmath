@@ -64,7 +64,7 @@
 			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
 			<DCC_DcuOutput>out\obj\</DCC_DcuOutput>
 			<TASM_Debugging>Full</TASM_Debugging>
-			<AllPackageLibs>vcl.lib;rtl.lib;vclx.lib;bcbsmp.lib;pkDesigner.lib;vcldb.lib;adortl.lib;bdertl.lib;vcldbx.lib;ibxpress.lib;dsnap.lib;dsnapcon.lib;teeui.lib;teedb.lib;tee.lib;dss.lib;dsnapcon.lib;inetdbbde.lib;inetdbxpress.lib;dbexpress.lib;bcbie.lib;soaprtl.lib;dbxcds.lib;indycore.lib;indysystem.lib;bcboffice2k.lib;MathGrapherPackage.lib</AllPackageLibs>
+			<AllPackageLibs>vcl.lib;rtl.lib;vclx.lib;pkDesigner.lib;vcldb.lib;adortl.lib;bdertl.lib;vcldbx.lib;ibxpress.lib;dsnap.lib;dsnapcon.lib;teeui.lib;teedb.lib;tee.lib;dsnapcon.lib;inetdbbde.lib;inetdbxpress.lib;dbexpress.lib;bcbie.lib;soaprtl.lib;dbxcds.lib;indycore.lib;indysystem.lib;bcboffice2k.lib;MathGrapherPackage.lib</AllPackageLibs>
 			<TASM_AdditionalSwitches> /w2 out\obj\</TASM_AdditionalSwitches>
 			<OutputExt>exe</OutputExt>
 			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
@@ -85,6 +85,8 @@
 			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<Manifest_File>None</Manifest_File>
+			<UsePackages>true</UsePackages>
 			<DCC_AdditionalSwitches> -M -V</DCC_AdditionalSwitches>
 			<DCC_Define>DEBUG;$(DCC_Define);$(DCC_Define)</DCC_Define>
 			<BCC_Defines>_DEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
@@ -95,9 +97,12 @@
 			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+			<UsePackages>false</UsePackages>
+			<LinkPackageImports>vcl.bpi;rtl.bpi;vclx.bpi;pkDesigner.bpi</LinkPackageImports>
+			<DCC_StrictVarStrings>false</DCC_StrictVarStrings>
 			<_TCHARMapping>wchar_t</_TCHARMapping>
 			<BCC_AllowNonConstCalls>true</BCC_AllowNonConstCalls>
-			<LinkPackageStatics>vcl.lib;rtl.lib;vclx.lib;bcbsmp.lib;pkDesigner.lib;vcldb.lib;adortl.lib;bdertl.lib;vcldbx.lib;ibxpress.lib;dsnap.lib;dsnapcon.lib;teeui.lib;teedb.lib;tee.lib;dss.lib;inetdbbde.lib;inetdbxpress.lib;dbexpress.lib;bcbie.lib;soaprtl.lib;dbxcds.lib;indycore.lib;indysystem.lib;bcboffice2k.lib;MathGrapherPackage.lib</LinkPackageStatics>
+			<LinkPackageStatics>vcldb.lib;adortl.lib;bdertl.lib;vcldbx.lib;ibxpress.lib;dsnap.lib;dsnapcon.lib;teeui.lib;teedb.lib;tee.lib;inetdbbde.lib;inetdbxpress.lib;dbexpress.lib;bcbie.lib;soaprtl.lib;dbxcds.lib;indycore.lib;indysystem.lib;bcboffice2k.lib;MathGrapherPackage.lib</LinkPackageStatics>
 			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
 			<VerInfo_Locale>1033</VerInfo_Locale>
 			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.1.1.168;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
@@ -122,8 +127,8 @@
 				<BuildOrder>0</BuildOrder>
 			</DelphiCompile>
 			<ResFiles Include="Cursores.res">
-				<BuildOrder>101</BuildOrder>
 				<BuildOrder>3</BuildOrder>
+				<BuildOrder>101</BuildOrder>
 			</ResFiles>
 			<CppCompile Include="fMain.cpp">
 				<BuildOrder>8</BuildOrder>
@@ -144,16 +149,16 @@
 				<BuildOrder>36</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Forms\Child\fChild.cpp">
-				<BuildOrder>41</BuildOrder>
+				<BuildOrder>42</BuildOrder>
 				<Form>frmChild</Form>
 				<DependentOn>Forms\Child\fChild.h</DependentOn>
-				<BuildOrder>42</BuildOrder>
+				<BuildOrder>41</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Forms\Configuracion\fConfiguracion.cpp">
-				<BuildOrder>35</BuildOrder>
+				<BuildOrder>41</BuildOrder>
 				<Form>frmConfiguracion</Form>
 				<DependentOn>Forms\Configuracion\fConfiguracion.h</DependentOn>
-				<BuildOrder>41</BuildOrder>
+				<BuildOrder>35</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Forms\Expresion\fExpresion.cpp">
 				<BuildOrder>86</BuildOrder>
@@ -186,16 +191,16 @@
 				<BuildOrder>12</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Forms\Matrices\NuevaMatriz\fNuevaMatriz.cpp">
-				<BuildOrder>128</BuildOrder>
+				<BuildOrder>13</BuildOrder>
 				<Form>frmNuevaMatriz</Form>
 				<DependentOn>Forms\Matrices\NuevaMatriz\fNuevaMatriz.h</DependentOn>
-				<BuildOrder>13</BuildOrder>
+				<BuildOrder>128</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Forms\NuevoProyecto\fNuevoProyecto.cpp">
-				<BuildOrder>110</BuildOrder>
+				<BuildOrder>19</BuildOrder>
 				<Form>frmNuevoProyecto</Form>
 				<DependentOn>Forms\NuevoProyecto\fNuevoProyecto.h</DependentOn>
-				<BuildOrder>19</BuildOrder>
+				<BuildOrder>110</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Forms\PropVisor\fPropVisor.cpp">
 				<BuildOrder>62</BuildOrder>
@@ -204,16 +209,16 @@
 				<BuildOrder>38</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Forms\Rectas\fRectas.cpp">
-				<BuildOrder>107</BuildOrder>
+				<BuildOrder>17</BuildOrder>
 				<Form>frmRectas</Form>
 				<DependentOn>Forms\Rectas\fRectas.h</DependentOn>
-				<BuildOrder>17</BuildOrder>
+				<BuildOrder>107</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Forms\Rectas\nuevaRecta\nuevaRecta.cpp">
-				<BuildOrder>113</BuildOrder>
+				<BuildOrder>21</BuildOrder>
 				<Form>frmNuevaRecta</Form>
 				<DependentOn>Forms\Rectas\nuevaRecta\nuevaRecta.h</DependentOn>
-				<BuildOrder>21</BuildOrder>
+				<BuildOrder>113</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Forms\Reporte\fReporte.cpp">
 				<BuildOrder>74</BuildOrder>
@@ -240,10 +245,10 @@
 				<BuildOrder>2</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Forms\TextEditor\fTextEditor.cpp">
-				<BuildOrder>38</BuildOrder>
+				<BuildOrder>40</BuildOrder>
 				<Form>frmTextEditor</Form>
 				<DependentOn>Forms\TextEditor\fTextEditor.h</DependentOn>
-				<BuildOrder>40</BuildOrder>
+				<BuildOrder>38</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Forms\Trace\fTrace.cpp">
 				<BuildOrder>71</BuildOrder>
@@ -252,32 +257,32 @@
 				<BuildOrder>7</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Forms\VectoresR3\fVectoresR3.cpp">
-				<BuildOrder>131</BuildOrder>
+				<BuildOrder>15</BuildOrder>
 				<Form>frmVectoresR3</Form>
 				<DependentOn>Forms\VectoresR3\fVectoresR3.h</DependentOn>
-				<BuildOrder>15</BuildOrder>
+				<BuildOrder>131</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Forms\Vectores\fVectores.cpp">
-				<BuildOrder>119</BuildOrder>
+				<BuildOrder>16</BuildOrder>
 				<Form>frmVectores</Form>
 				<DependentOn>Forms\Vectores\fVectores.h</DependentOn>
-				<BuildOrder>16</BuildOrder>
+				<BuildOrder>119</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="MaxMath.cpp">
 				<BuildOrder>5</BuildOrder>
 				<BuildOrder>29</BuildOrder>
 			</CppCompile>
 			<ResFiles Include="MaxMath.res">
-				<BuildOrder>2</BuildOrder>
 				<BuildOrder>30</BuildOrder>
+				<BuildOrder>2</BuildOrder>
 			</ResFiles>
 			<ResFiles Include="StringResources.RES">
-				<BuildOrder>104</BuildOrder>
 				<BuildOrder>18</BuildOrder>
+				<BuildOrder>104</BuildOrder>
 			</ResFiles>
 			<CppCompile Include="Units\Colas\uColas.cpp">
-				<BuildOrder>77</BuildOrder>
 				<BuildOrder>8</BuildOrder>
+				<BuildOrder>77</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Units\Config\uConfig.cpp">
 				<BuildOrder>29</BuildOrder>
@@ -289,7 +294,6 @@
 			</CppCompile>
 			<CppCompile Include="Units\Eval_Ex\uEval_Ex.cpp">
 				<BuildOrder>44</BuildOrder>
-				<BuildOrder>44</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Units\Funcion\uFuncion.cpp">
 				<BuildOrder>26</BuildOrder>
@@ -297,15 +301,14 @@
 			</CppCompile>
 			<CppCompile Include="Units\Integra\uIntegra.cpp">
 				<BuildOrder>23</BuildOrder>
-				<BuildOrder>23</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Units\Intervalo\uIntervalo.cpp">
-				<BuildOrder>20</BuildOrder>
 				<BuildOrder>24</BuildOrder>
+				<BuildOrder>20</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Units\Limite\uLimite.cpp">
-				<BuildOrder>17</BuildOrder>
 				<BuildOrder>28</BuildOrder>
+				<BuildOrder>17</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Units\Math_Ex\uMath_Ex.cpp">
 				<BuildOrder>80</BuildOrder>
@@ -316,52 +319,52 @@
 				<BuildOrder>11</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Units\Metodos\uMetodos.cpp">
-				<BuildOrder>14</BuildOrder>
 				<BuildOrder>32</BuildOrder>
+				<BuildOrder>14</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Units\Recta\uRecta.cpp">
-				<BuildOrder>116</BuildOrder>
 				<BuildOrder>20</BuildOrder>
+				<BuildOrder>116</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Units\RootFinding\uRootFinding.cpp">
-				<BuildOrder>11</BuildOrder>
 				<BuildOrder>33</BuildOrder>
+				<BuildOrder>11</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Units\Utils\uGlobals.cpp">
-				<BuildOrder>134</BuildOrder>
 				<BuildOrder>14</BuildOrder>
+				<BuildOrder>134</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="Units\Utils\uUtils.cpp">
-				<BuildOrder>83</BuildOrder>
 				<BuildOrder>9</BuildOrder>
+				<BuildOrder>83</BuildOrder>
 			</CppCompile>
 			<ResFiles Include="WindowsXP.res">
 				<BuildOrder>98</BuildOrder>
 				<BuildOrder>4</BuildOrder>
 			</ResFiles>
-			<FormResources Include="Forms\Splash\fSplash.dfm"/>
-			<FormResources Include="Forms\Expresion\fExpresion.dfm"/>
-			<FormResources Include="Forms\Reporte\fReporte.dfm"/>
-			<FormResources Include="Forms\Trace\fTrace.dfm"/>
-			<FormResources Include="Forms\Matrices\fMatrices.dfm"/>
-			<FormResources Include="Forms\Matrices\NuevaMatriz\fNuevaMatriz.dfm"/>
 			<FormResources Include="Forms\VectoresR3\fVectoresR3.dfm"/>
+			<FormResources Include="Forms\Trace\fTrace.dfm"/>
 			<FormResources Include="Forms\Vectores\fVectores.dfm"/>
-			<FormResources Include="Forms\Rectas\fRectas.dfm"/>
-			<FormResources Include="Forms\NuevoProyecto\fNuevoProyecto.dfm"/>
-			<FormResources Include="Forms\Rectas\nuevaRecta\nuevaRecta.dfm"/>
-			<FormResources Include="Forms\Limite\fLimite.dfm"/>
-			<FormResources Include="Forms\About\fAbout.dfm"/>
-			<FormResources Include="fMain.dfm"/>
-			<FormResources Include="Forms\SelectorGraficas\fSelectorGraficas.dfm"/>
-			<FormResources Include="Forms\SelectFunc\fSelectFunc.dfm"/>
-			<FormResources Include="Forms\Arbol\fArbol.dfm"/>
-			<FormResources Include="Forms\IngresoDatos\fIngresoDatos.dfm"/>
-			<FormResources Include="Forms\PropVisor\fPropVisor.dfm"/>
-			<FormResources Include="Forms\Funcion\fFuncion.dfm"/>
 			<FormResources Include="Forms\TextEditor\fTextEditor.dfm"/>
 			<FormResources Include="Forms\Configuracion\fConfiguracion.dfm"/>
 			<FormResources Include="Forms\Child\fChild.dfm"/>
+			<FormResources Include="Forms\Expresion\fExpresion.dfm"/>
+			<FormResources Include="Forms\IngresoDatos\fIngresoDatos.dfm"/>
+			<FormResources Include="Forms\Funcion\fFuncion.dfm"/>
+			<FormResources Include="Forms\Arbol\fArbol.dfm"/>
+			<FormResources Include="Forms\About\fAbout.dfm"/>
+			<FormResources Include="fMain.dfm"/>
+			<FormResources Include="Forms\Reporte\fReporte.dfm"/>
+			<FormResources Include="Forms\Rectas\nuevaRecta\nuevaRecta.dfm"/>
+			<FormResources Include="Forms\SelectFunc\fSelectFunc.dfm"/>
+			<FormResources Include="Forms\Splash\fSplash.dfm"/>
+			<FormResources Include="Forms\SelectorGraficas\fSelectorGraficas.dfm"/>
+			<FormResources Include="Forms\Rectas\fRectas.dfm"/>
+			<FormResources Include="Forms\Matrices\fMatrices.dfm"/>
+			<FormResources Include="Forms\Limite\fLimite.dfm"/>
+			<FormResources Include="Forms\Matrices\NuevaMatriz\fNuevaMatriz.dfm"/>
+			<FormResources Include="Forms\PropVisor\fPropVisor.dfm"/>
+			<FormResources Include="Forms\NuevoProyecto\fNuevoProyecto.dfm"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
