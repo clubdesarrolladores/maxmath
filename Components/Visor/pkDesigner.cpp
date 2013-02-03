@@ -2,6 +2,7 @@
 
 #include <basepch.h>
 #pragma hdrstop
+
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
 

@@ -6,7 +6,7 @@
 
 #include "Designer2D.h"
 #include <Clipbrd.hpp>
-#include <vcl\printers.hpp>
+#include <printers.hpp>
 
 #pragma package(smart_init)
 
@@ -1256,9 +1256,9 @@ bool __fastcall TDesigner2D::LoadFromFile(AnsiString Filename)
     }catch(...){
       r = false;}
   }__finally{
-    delete Archivo;
-    return r;
+	delete Archivo;
   }
+  return r;
 }
 
 //---------------------------------------------------------------------------
@@ -1281,8 +1281,8 @@ bool __fastcall TDesigner2D::SaveToFile(AnsiString Filename)
       r = false;}
   }__finally{
     delete Archivo;
-    return r;
   }
+  return r;
 }
 
 //---------------------------------------------------------------------------
@@ -1319,19 +1319,19 @@ TFontStyles IntToFontStyle(int r)
 void __fastcall TDesigner2D::ComponentToRecord(void)
 {
   FileDsg.FontAxeX_Color = FFontAxeX->Color;
-  strcpy(FileDsg.FontAxeX_Name, FFontAxeX->Name.c_str());
+  strcpy(FileDsg.FontAxeX_Name, AnsiString(FFontAxeX->Name).c_str());
   FileDsg.FontAxeX_Size = FFontAxeX->Size;
   FileDsg.FontAxeX_Style = FontStyleToInt(FFontAxeX->Style);
   FileDsg.FontAxeY_Color = FFontAxeY->Color;
-  strcpy(FileDsg.FontAxeY_Name, FFontAxeY->Name.c_str());
+  strcpy(FileDsg.FontAxeY_Name, AnsiString(FFontAxeY->Name).c_str());
   FileDsg.FontAxeY_Size = FFontAxeY->Size;
   FileDsg.FontAxeY_Style = FontStyleToInt(FFontAxeY->Style);
   FileDsg.FontLabelX_Color = FFontLabelX->Color;
-  strcpy(FileDsg.FontLabelX_Name, FFontLabelX->Name.c_str());
+  strcpy(FileDsg.FontLabelX_Name, AnsiString(FFontLabelX->Name).c_str());
   FileDsg.FontLabelX_Size = FFontLabelX->Size;
   FileDsg.FontLabelX_Style = FontStyleToInt(FFontLabelX->Style) ;
   FileDsg.FontLabelY_Color = FFontLabelY->Color;
-  strcpy(FileDsg.FontLabelY_Name, FFontLabelY->Name.c_str());
+  strcpy(FileDsg.FontLabelY_Name, AnsiString(FFontLabelY->Name).c_str());
   FileDsg.FontLabelY_Size = FFontLabelY->Size;
   FileDsg.FontLabelY_Style = FontStyleToInt(FFontLabelY->Style);
   FileDsg.AxeX_Color = FAxeX->Color;
