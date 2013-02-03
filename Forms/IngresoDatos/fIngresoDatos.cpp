@@ -145,7 +145,10 @@ void __fastcall TfrmIngresoDatos::btnCalcularClick(TObject *Sender)
   TCLongDouble cldx, cldy, cldb, cldAux;
   if( !GetDatos(&Fx,&Gx,&a,&b,&e) ){
 	Application->MessageBox(L"Existen errores en los datos.\nPor favor revíselos.", L"Error en definición", MB_OK+MB_ICONERROR);
-    return;}
+    return;
+  }
+  AnsiString FxName(Funciones->Items[Fx].Nombre);
+  AnsiString GxName(Funciones->Items[Gx].Nombre);
   prgProgreso->Position = 50;
   try{
     switch( Tag )
@@ -242,7 +245,7 @@ void __fastcall TfrmIngresoDatos::btnCalcularClick(TObject *Sender)
         break;
       //-----------------------------------
       case opEstCompleto:
-        frmTextEditor->CaptionText(Format("Estudio completo de %s, entre x = %g y x = %g", ARRAYOFCONST((Funciones->Items[Fx].Nombre,a,b))));
+        frmTextEditor->CaptionText(Format("Estudio completo de %s, entre x = %g y x = %g", ARRAYOFCONST((FxName,a,b))));
         Tag = opIntersEjes;
         btnCalcularClick(Sender);
         Tag = opParidad;
@@ -266,7 +269,7 @@ void __fastcall TfrmIngresoDatos::btnCalcularClick(TObject *Sender)
       //-----------------------------------
       case opIntersEjes:
         iAux = InterseccionEjes(Funciones->Items[Fx], a, b, cldx, ldy, cldy);
-        frmTextEditor->CaptionText(Format("Cálculo de ceros de %s, entre x = %g y x = %g", ARRAYOFCONST((Funciones->Items[Fx].Nombre,a,b))));
+        frmTextEditor->CaptionText(Format("Cálculo de ceros de %s, entre x = %g y x = %g", ARRAYOFCONST((FxName,a,b))));
         frmTextEditor->CommonText("");
         if( (a <= 0.0) && (0.0 < b) ){
           frmTextEditor->CommonText("Intersección eje y:");
@@ -291,7 +294,7 @@ void __fastcall TfrmIngresoDatos::btnCalcularClick(TObject *Sender)
         break;
       //-----------------------------------
       case opParidad:
-        frmTextEditor->CaptionText(Format("Cálculo de la paridad de %s, entre x = %g y x = %g", ARRAYOFCONST((Funciones->Items[Fx].Nombre,a,b))));
+        frmTextEditor->CaptionText(Format("Cálculo de la paridad de %s, entre x = %g y x = %g", ARRAYOFCONST((FxName,a,b))));
         frmTextEditor->CommonText("");
         switch( Paridad(Funciones->Items[Fx], a, b) )
         {
@@ -305,7 +308,7 @@ void __fastcall TfrmIngresoDatos::btnCalcularClick(TObject *Sender)
       //-----------------------------------
       case opPC1eraDer:
         PtsCrit1erDer(Funciones->Items[Fx], a, b, cldx);
-        frmTextEditor->CaptionText(Format("Cálculo de puntos criticos de la 1er derivada de %s, entre x = %g y x = %g", ARRAYOFCONST((Funciones->Items[Fx].Nombre,a,b))));
+        frmTextEditor->CaptionText(Format("Cálculo de puntos criticos de la 1er derivada de %s, entre x = %g y x = %g", ARRAYOFCONST((FxName,a,b))));
         frmTextEditor->CommonText("");
         frmTextEditor->CommonText("Intersecciones eje x: "+IntToStr(cldx.Count));
         while( !cldx.Empty() ){
@@ -318,7 +321,7 @@ void __fastcall TfrmIngresoDatos::btnCalcularClick(TObject *Sender)
       //-----------------------------------
       case opIntCrecDecrec:
         Crec_Decr(Funciones->Items[Fx], a, b, cldx, cldb);
-        frmTextEditor->CaptionText(Format("Cálculo de intervalos de crecimiento y decrecimiento de %s, entre x = %g y x = %g", ARRAYOFCONST((Funciones->Items[Fx].Nombre, a, b))));
+        frmTextEditor->CaptionText(Format("Cálculo de intervalos de crecimiento y decrecimiento de %s, entre x = %g y x = %g", ARRAYOFCONST((FxName, a, b))));
         frmTextEditor->CommonText("");
         frmTextEditor->CommonText("Intervalos: "+IntToStr(cldb.Count));
         while( !cldb.Empty() ){
@@ -336,7 +339,7 @@ void __fastcall TfrmIngresoDatos::btnCalcularClick(TObject *Sender)
       //-----------------------------------
       case opMaxMin:
         Maximos_y_Minimos(Funciones->Items[Fx], a, b, cldx, cldy, cldb);
-        frmTextEditor->CaptionText(Format("Cálculo de maximos y minimos de %s, entre x = %g y x = %g", ARRAYOFCONST((Funciones->Items[Fx].Nombre,a,b))));
+        frmTextEditor->CaptionText(Format("Cálculo de maximos y minimos de %s, entre x = %g y x = %g", ARRAYOFCONST((FxName,a,b))));
         frmTextEditor->CommonText("");
         frmTextEditor->CommonText("Extremos: "+IntToStr(cldx.Count));
         while( !cldx.Empty() ){
@@ -354,7 +357,7 @@ void __fastcall TfrmIngresoDatos::btnCalcularClick(TObject *Sender)
       //-----------------------------------
       case opPC2daDer:
         PtsCrit2daDer(Funciones->Items[Fx], a, b, cldx);
-        frmTextEditor->CaptionText(Format("Cálculo de puntos criticos de la segunda derivada de %s, entre x = %g y x = %g", ARRAYOFCONST((Funciones->Items[Fx].Nombre,a,b))));
+        frmTextEditor->CaptionText(Format("Cálculo de puntos criticos de la segunda derivada de %s, entre x = %g y x = %g", ARRAYOFCONST((FxName,a,b))));
         frmTextEditor->CommonText("");
         frmTextEditor->CommonText("Intersecciones eje x: "+IntToStr(cldx.Count));
         while( !cldx.Empty() ){
@@ -367,7 +370,7 @@ void __fastcall TfrmIngresoDatos::btnCalcularClick(TObject *Sender)
       //-----------------------------------
       case opIntConcConv:
         Conc_Conv(Funciones->Items[Fx], a, b, cldx, cldb);
-        frmTextEditor->CaptionText(Format("Cálculo de intervalos de concavidad y convexidad de %s, entre x = %g y x = %g", ARRAYOFCONST((Funciones->Items[Fx].Nombre, a, b))));
+        frmTextEditor->CaptionText(Format("Cálculo de intervalos de concavidad y convexidad de %s, entre x = %g y x = %g", ARRAYOFCONST((FxName, a, b))));
         frmTextEditor->CommonText("");
         frmTextEditor->CommonText("Intervalos: "+IntToStr(cldb.Count));
         while( !cldb.Empty() ){
@@ -385,7 +388,7 @@ void __fastcall TfrmIngresoDatos::btnCalcularClick(TObject *Sender)
       //-----------------------------------
       case opPtosInflex:
         Puntos_de_Inflexion(Funciones->Items[Fx], a, b, cldx, cldy);
-        frmTextEditor->CaptionText(Format("Cálculo de puntos de inflexión de %s, entre x = %g y x = %g", ARRAYOFCONST((Funciones->Items[Fx].Nombre,a,b))));
+        frmTextEditor->CaptionText(Format("Cálculo de puntos de inflexión de %s, entre x = %g y x = %g", ARRAYOFCONST((FxName,a,b))));
         frmTextEditor->CommonText("");
         frmTextEditor->CommonText("Puntos: "+IntToStr(cldx.Count));
         while( !cldx.Empty() ){
@@ -403,7 +406,7 @@ void __fastcall TfrmIngresoDatos::btnCalcularClick(TObject *Sender)
       //-----------------------------------
       case opInters2Curvas:
         iAux = Interseccion2Curvas(Funciones->Items[Fx], Funciones->Items[Gx], a, b, cldx, cldy);
-        frmTextEditor->CaptionText(Format("Cálculo de intersecciones entre %s y %s, entre x = %g y x = %g", ARRAYOFCONST((Funciones->Items[Fx].Nombre,Funciones->Items[Gx].Nombre,a,b))));
+        frmTextEditor->CaptionText(Format("Cálculo de intersecciones entre %s y %s, entre x = %g y x = %g", ARRAYOFCONST((FxName,GxName,a,b))));
         frmTextEditor->CommonText("Intersecciones: "+IntToStr(iAux));
         while( !cldx.Empty() ){
           frmTextEditor->ParOrdenado("(%g, %g)", cldx.GetValue(), cldy.GetValue(),"");
